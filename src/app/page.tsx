@@ -2,12 +2,11 @@
 import React from "react";
 import { WavyBackground } from "../components/ui/wavy-background";
 import HeroParallaxDemo from "./home/page";
-import { CardHoverEffectDemo } from "@/components/Service";
-import  Footer  from "@/components/footer";
+import { CardHoverEffectDemo } from "../components/Services/Service";
 import { ImagesSliderDemo } from "@/components/hero";
 import { InfiniteMovingCardsDemo } from "@/components/card";
 import {TimelineDemo} from "@/components/ Timeline";
-import About from '../components/about'
+import About from '../components/About/about'
 import { GlowingStarsBackgroundCardPreview } from "@/components/new";
 import  Stats  from "../components/stats";
 export default function Home() {
@@ -27,9 +26,9 @@ export default function Home() {
     <CardHoverEffectDemo/>
     <TimelineDemo/>
     <Stats/>
-   
     <InfiniteMovingCardsDemo />
-    <Footer/>
+   
+    
     {/* <div style={{display:"flex",flexDirection:"row"}}>
     <GlowingStarsBackgroundCardPreview/>
     <GlowingStarsBackgroundCardPreview/>

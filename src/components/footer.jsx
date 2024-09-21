@@ -1,3 +1,4 @@
+"use client"
 import { Box, Typography, Link, TextField, Button } from '@mui/material';
 import { styled } from '@mui/system';
 import style from './css/Footer.module.css'
@@ -5,7 +6,7 @@ import style from './css/Footer.module.css'
 const FooterContainer = styled(Box)(({ theme }) => ({
   backgroundColor: '#1f1f1f;',
   color: '#fff',
-  padding: theme.spacing(4),
+  padding: theme.spacing(6),
   [theme.breakpoints.down('sm')]: {
     textAlign: 'center',
   },
@@ -24,6 +25,7 @@ const FooterSection = styled(Box)(({ theme }) => ({
 
 const LogoSection = styled(Box)(({ theme }) => ({
   maxWidth: '300px',
+  marginLeft:'15px'
 }));
 
 const FooterLink = styled(Link)(({ theme }) => ({

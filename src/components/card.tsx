@@ -1,43 +1,60 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
-import {Typography} from '@mui/material'
+import { Typography } from "@mui/material";
 import { Boxes } from "./ui/background-boxes";
 
 export function InfiniteMovingCardsDemo() {
   return (
-   
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-    <div style={{marginBottom:120,textAlign:'center',padding:4}}>
-     <Typography style={{fontSize:35,fontWeight:700,boxShadow:'50px',fontFamily:'revert-layer',marginBottom:20}}>
-     What our clients say about us
-    </Typography>
+    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-black items-center justify-center relative overflow-hidden">
+      <div className="mb-12 text-center px-4 lg:px-48">
+        <Typography
+          sx={{
+            fontSize: { xs: 24, sm: 30, md: 35 },
+            fontWeight: 700,
+            boxShadow: "50px",
+            fontFamily: "revert-layer",
+            mb: { xs: 4, md: 6 },
+            color: "white", // Ensure the title is visible
+          }}
+        >
+          What our clients say about us
+        </Typography>
 
-     <p style={{marginLeft:300,marginRight:300}}>We thanks for all our awesome Clients! There are hundreds of our happy clients!
-     Let's see what others say about Rapidzz Solutions!</p>
-     </div>
+        <p
+          className="text-sm sm:text-base lg:text-lg mx-auto"
+          style={{
+            maxWidth: "90%",
+            padding: "0 16px",
+            color: "white", // Ensure the paragraph is visible
+          }}
+        >
+          We thank all our awesome Clients! There are hundreds of happy clients!
+          Let's see what others say about Rapidzz Solutions!
+        </p>
+      </div>
+
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
         speed="slow"
       />
-      <Boxes/>
+      <Boxes />
     </div>
-    
   );
 }
 
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
+      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness...",
     name: "Charles Dickens",
     title: "A Tale of Two Cities",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer...",
     name: "William Shakespeare",
     title: "Hamlet",
   },
@@ -48,13 +65,13 @@ const testimonials = [
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+      "It is a truth universally acknowledged, that a single man in possession of a good fortune...",
     name: "Jane Austen",
     title: "Pride and Prejudice",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse...",
     name: "Herman Melville",
     title: "Moby-Dick",
   },
