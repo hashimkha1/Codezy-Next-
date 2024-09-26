@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import  Footer  from "@/components/footer";
+import DescriptionProvider from "@/components/context/description";
 
 export default function RootLayout({
   children,
@@ -15,7 +16,9 @@ export default function RootLayout({
        
       >
         <Navbar/>
+        <DescriptionProvider>
         {children}
+        </DescriptionProvider>
         <Footer/>
       </body>
     </html>
