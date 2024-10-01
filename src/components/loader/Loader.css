@@ -1,0 +1,69 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(25px);  /* Stronger glass effect */
+  background-color: rgba(255, 255, 255, 0.1);  /* Transparent, softer background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);  /* Transparent box background */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);  /* Prominent 3D shadow */
+  backdrop-filter: blur(25px);  /* Stronger glass effect */
+  border: 3px solid rgba(255, 255, 255, 0.25);  /* Sharper border */
+  overflow: hidden;
+  transform-style: preserve-3d;  /* Activate 3D space for elements inside */
+  perspective: 800px;  /* Add perspective to simulate depth */
+}
+
+.bar {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, #ff8a00, #e52e71);  /* Gradient bars */
+  margin: 0 5px;
+  animation: pulse 1.5s infinite ease-in-out;
+  border-radius: 4px;
+  transform: rotateX(45deg) rotateY(45deg);  /* Apply 3D rotation to bars */
+  box-shadow: 0 5px 15px rgba(255, 138, 0, 0.7);  /* More prominent shadow for depth */
+}
+
+.bar1 {
+  animation-delay: 0.1s;
+}
+
+.bar2 {
+  animation-delay: 0.4s;
+}
+
+.bar3 {
+  animation-delay: 0.9s;
+}
+
+.bar4 {
+  animation-delay: 1s;
+}
+
+
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scaleY(1) rotateX(45deg);  /* Rotate around X-axis for 3D effect */
+  }
+  50% {
+    transform: scaleY(1.8) rotateX(50deg);  /* Bars pulse and stretch more */
+  }
+}

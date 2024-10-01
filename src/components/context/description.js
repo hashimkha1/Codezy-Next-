@@ -1,8 +1,6 @@
 'use client'
 import React, { useState, useEffect, createContext } from 'react';
-import Hero from '../../app/services/herosection.js';
 import axios from 'axios';
-import ServicesSection from '../../app/services/page'
 
 const DescriContext = createContext();
 

@@ -8,7 +8,16 @@ const word = "Our Services";
 
 function Hero() {
    const {desc} = useContext(DescriContext);
-   console.log(desc)
+
+   let data = null;
+   for (let item of desc){
+     if (item.title === 'Our services'){
+      data = item;
+      break;
+     }
+     return data
+   }
+   console.log(data)
    
    return (
       <>
@@ -24,10 +33,11 @@ function Hero() {
          {/* Section 2: Detailed Text Section */}
          <section className="services-text-section">
             <div className="services-text-content">
-               {desc.map(item =>(
-                 <TextGenerateEffect words={item.description} />
-               ))}
-               
+            {data ?(
+                   <TextGenerateEffect words={data.description} />
+               ): (
+                  <p>No data found</p>
+                )}
             </div>
            
          </section>
