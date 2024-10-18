@@ -28,6 +28,7 @@ import Picker from '@emoji-mart/react';
 import ClearIcon from '@mui/icons-material/Clear';
 import io from 'socket.io-client';
 import { PlaceholdersAndVanishInput } from '../ui/placeholders-and-vanish-input';
+import '../css/Chatbot.css'
 
 const placeholders = [
   'Need custom app development?',
@@ -44,6 +45,7 @@ export default function Chatbot() {
   const [message, setMessage] = useState('');
   const [showOptions, setShowOptions] = useState(false); // State for showing buttons for bot or human
   const chatContainerRef = useRef(null);
+  const [loading, setLoading] = useState(false);
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [openConfirmation, setOpenConfirmation] = useState(false);
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
@@ -67,6 +69,7 @@ export default function Chatbot() {
     }
     socket = io('http://localhost:8000'); 
     socket.on('receiveMessage', (data) => {
+      setLoading(false);
       setChatHistory((prev) => {
         const newHistory = [...prev, { sender: data.sender, message: data.message }];
         localStorage.setItem('chatHistory', JSON.stringify(newHistory));
@@ -120,6 +123,7 @@ export default function Chatbot() {
       }
 
       setMessage('');
+      setLoading(true);
     }
   };
 
@@ -413,6 +417,23 @@ export default function Chatbot() {
                     </ListItem>
                   ))}
                 </List>
+              )}
+                {loading && (
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'flex-start',
+                    alignItems: 'center',
+                    mt: 2,
+                  }}
+                >
+                  <Avatar src="/images/chatbot.jpeg" sx={{ mr: 1 }} />
+                  <div className="dot-loader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </Box>
               )}
 
               {/* Bot or Human Option Buttons */}
