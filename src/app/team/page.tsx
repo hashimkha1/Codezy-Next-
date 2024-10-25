@@ -102,7 +102,7 @@ const AboutUs = () => {
       </Grid>
     </Grid>
   </Box>
- {/* Quality, Approach, and Innovation Section */}
+ 
   {/* Quality, Approach, and Innovation Section */}
   <Box sx={{ padding: 4,marginLeft:8,marginRight:6 }}>
     <Grid container spacing={3}>
