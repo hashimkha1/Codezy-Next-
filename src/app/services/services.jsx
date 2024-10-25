@@ -137,7 +137,7 @@ const ServicesSection = () => {
             </Box>
             <Box sx={{ p: 4, textAlign: 'center' }}>
                 <Typography variant="h3" sx={{ mb: 6, mt: 4 }} gutterBottom>
-                        {data.title}
+                        {data?.title}
                 </Typography>  
                 <section className="services-text-section">
                     <div className="services-text-content">

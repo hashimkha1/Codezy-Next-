@@ -1,0 +1,139 @@
+/* Main container for the About Us section */
+.about-us-section {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    font-family: Arial, sans-serif; /* Use a clean sans-serif font */
+  }
+  
+  /* Header styles */
+  .about-us-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-title {
+    font-size: 2.5rem;
+    color: #333; /* Dark text color */
+    margin: 10px 0;
+  }
+  
+  .about-us-banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the banner */
+  }
+  
+  /* Statistics section */
+  .about-us-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .stat {
+    text-align: center;
+    background: #fff; /* White background for stats */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.2s; /* Smooth scaling effect */
+  }
+  
+  .stat:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .stat h2 {
+    font-size: 2rem;
+    color: #007BFF; /* Blue color for numbers */
+    margin: 0;
+  }
+  
+  .stat p {
+    color: #666; /* Lighter text color */
+  }
+  
+  /* Content section */
+  .about-us-content {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .about-us-image {
+    width: 250px; /* Fixed width for images */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for images */
+    margin-right: 20px; /* Spacing between image and text */
+  }
+  
+  .about-us-text {
+    flex: 1; /* Allow the text section to grow */
+  }
+  
+  .about-us-description p {
+    line-height: 1.6; /* Increase line height for readability */
+    color: #444; /* Darker text color for paragraphs */
+  }
+  
+  /* Section styles */
+  .about-us-mission-vision,
+  .about-us-plan-quality,
+  .about-us-approach-innovation,
+  .about-us-methodology-client,
+  .about-us-going-green {
+    display: flex;
+    flex-wrap: wrap; /* Allow blocks to wrap */
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .about-us-block {
+    background-color: #fff; /* White background for blocks */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex: 1 1 calc(30% - 20px); /* Flex grow/shrink */
+    margin: 10px; /* Margin for spacing */
+    transition: transform 0.2s; /* Smooth scaling effect */
+  }
+  
+  .about-us-block:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .about-us-block h3 {
+    font-size: 1.5rem; /* Font size for section headers */
+    color: #007BFF; /* Blue color for headers */
+    margin-bottom: 10px; /* Space below header */
+  }
+  
+  .about-us-block-image {
+    width: 100%; /* Full width of block */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .about-us-stats {
+      flex-direction: column; /* Stack stats on smaller screens */
+    }
+  
+    .about-us-block {
+      flex: 1 1 100%; /* Full width on small screens */
+    }
+  
+    .about-us-image {
+      width: 100%; /* Full width on small screens */
+      margin-right: 0; /* Remove margin */
+      margin-bottom: 15px; /* Add margin below image */
+    }
+  
+    .about-us-content {
+      flex-direction: column; /* Stack content on smaller screens */
+      align-items: center; /* Center align items */
+    }
+  }
+  

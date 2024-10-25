@@ -19,9 +19,9 @@ function Stats() {
     display= 'flex'
     justifyContent="space-around"
     alignItems="center"
-    bgcolor="#333"
+    bgcolor="black"
     p={2}
-    sx={{ gap: 4,height:400,background:'tranparent'}}
+    sx={{ gap: 4,height:400,background:'black'}}
     >
      {stats.map((data,index)=>(
       <Box 

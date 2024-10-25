@@ -8,7 +8,6 @@ import Loader from '../../components/loader/loader'
 
 const Services = () => {
   const [loading,setLoading] = useState(true);
-
   useEffect(()=>{
   const timer = setTimeout(()=>{
     setLoading(false);
