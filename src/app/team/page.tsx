@@ -37,6 +37,7 @@ const AboutUs = () => {
          xs={12} 
          sm={4}
          sx={{
+          height:250,
           borderRadius: '8px', 
           transition: 'transform 0.3s, box-shadow 0.3s', 
           '&:hover': {
@@ -51,7 +52,8 @@ const AboutUs = () => {
           Our Mission
         </Typography>
         <Typography variant="body1">
-          To provide innovative services of the highest order to our valued clients globally, fostering continuous improvement.
+        Our Mission
+        Our mission is to provide innovative services of the highest order to our valued clients throughout the world. We believe in continuous learning and improvement so that people living in every part of the world can cherish from our technical skills
         </Typography>
       </Grid>
       <Grid 
@@ -73,7 +75,7 @@ const AboutUs = () => {
           Our Vision
         </Typography>
         <Typography variant="body1">
-          To become the world’s leading software house, trusted as IT partners by other multinational corporations.
+        Our Vision is to become the world’s leading software house that can be considered as IT partners by other huge multi-national corporations.
         </Typography>
       </Grid>
       <Grid
@@ -100,7 +102,7 @@ const AboutUs = () => {
       </Grid>
     </Grid>
   </Box>
-
+ {/* Quality, Approach, and Innovation Section */}
   {/* Quality, Approach, and Innovation Section */}
   <Box sx={{ padding: 4,marginLeft:8,marginRight:6 }}>
     <Grid container spacing={3}>
@@ -109,6 +111,7 @@ const AboutUs = () => {
       xs={12}
        sm={4}
         sx={{
+          height:250,
           borderRadius: '8px', 
           transition: 'transform 0.3s, box-shadow 0.3s', 
           '&:hover': {
@@ -123,7 +126,7 @@ const AboutUs = () => {
           Quality
         </Typography>
         <Typography variant="body1">
-          We ensure that quality is maintained in today’s rapid development through test automation and comprehensive QA services.
+        Our Software Quality Assurance & Testing Practice makes sure that quality is maintained in today’s rapid software development life-cycle methods through innovative test automation and enables a full complete quality assurance testing services and source code review services.
         </Typography>
       </Grid>
       <Grid 
@@ -146,7 +149,7 @@ const AboutUs = () => {
           Approach
         </Typography>
         <Typography variant="body1">
-          Our unique approach blends IT innovations with practical implementations, leveraging current organizational assets.
+        Our approach focuses in a unique way towards our business model, to combine IT innovations with its implementations, while leveraging an organization’s current assets.
         </Typography>
       </Grid>
       <Grid
@@ -168,7 +171,7 @@ const AboutUs = () => {
           Innovation
         </Typography>
         <Typography variant="body1">
-          We strive for innovation by blending global experiences with local demands to deliver brilliant solutions.
+        We are striving for innovation, blending our global experiences with local demands. Our solutions are the combination of brilliant ideas met with equally diligent team.
         </Typography>
       </Grid>
     </Grid>
@@ -182,6 +185,7 @@ const AboutUs = () => {
        xs={12}
         sm={4}
         sx={{
+          height:250,
           borderRadius: '8px', 
           transition: 'transform 0.3s, box-shadow 0.3s', 
           '&:hover': {
@@ -196,7 +200,7 @@ const AboutUs = () => {
           Methodology
         </Typography>
         <Typography variant="body1">
-          With a time-tested methodology and structured solution-building, we maintain global business standards for customer success.
+        Our time tested business methodology, and structured solution building approach, we ensure to maintain our global business standards. Therefore we adopt a customer success model.The process of coding and designing is cumbersome task as slight errors in the techniques can defy the purpose of the project to a certain extent.
         </Typography>
       </Grid>
       <Grid
@@ -218,7 +222,7 @@ const AboutUs = () => {
           Client’s Response
         </Typography>
         <Typography variant="body1">
-          Our clients appreciate our quality of work, and we strive to maintain the same methodologies for optimized results.
+        Our clients have given grateful response regarding our Quality of work and we strive to maintain the same methodologies which give optimized results to our worthy clients.
         </Typography>
       </Grid>
       <Grid 
@@ -240,7 +244,7 @@ const AboutUs = () => {
           Going Green
         </Typography>
         <Typography variant="body1">
-          We are an eco-friendly company, striving for a paperless office and adopting solar energy from day one.
+        We are aspiring green, environment friendly company. We have been adopting for eco-friendly technologies from day one. We are striving for paperless office and solar energy.
         </Typography>
       </Grid>
     </Grid>
