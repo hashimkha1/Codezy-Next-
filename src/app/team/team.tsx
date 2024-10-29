@@ -47,8 +47,8 @@ const people = [
 const Modal = ({ member, onHover }) => (
   <div
     className="absolute bg-white p-4 rounded-lg shadow-lg w-40 text-center border border-gray-200"
-    style={{ top: "-100px", left: "50%", transform: "translateX(-50%)" }} // Position above the member
-    onMouseEnter={onHover} // Trigger tooltip display on hover
+    style={{ top: "-100px", left: "50%", transform: "translateX(-50%)" }} 
+    onMouseEnter={onHover} 
   >
     <h2 className="text-lg font-bold">{member.name}</h2>
     <p className="text-gray-600">{member.designation}</p>

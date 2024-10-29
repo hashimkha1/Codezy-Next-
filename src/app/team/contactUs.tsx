@@ -125,7 +125,7 @@ const ContactUs = () => {
               }}
               sx={{
                 '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-                  borderColor: 'white', // Change border color of the text field
+                  borderColor: 'white', 
                 },
                 '&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
                   borderColor: '#ffa500', 
