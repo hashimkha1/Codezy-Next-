@@ -39,7 +39,7 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/branding">Mediabuying Toolbox Development</HoveredLink>
           </div>
         </MenuItem>
-        <HoveredLink href="/web-dev">Hire Us</HoveredLink>
+        <HoveredLink href="/hire">Hire Us</HoveredLink>
       </Menu>
     </div>
   );
