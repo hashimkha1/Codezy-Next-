@@ -5,8 +5,7 @@ import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
 import Head from './head';
 
 const word = "Our Team";
-
-function Hero() {
+function Hero({backgroundImage}) {
    const { desc } = useContext(DescriContext);
 
    let data = null;
@@ -20,10 +19,12 @@ function Hero() {
    }
 
    console.log(data);
+   console.log(backgroundImage)
    
    return (
       <>
-         <section className="services-image-section" style={{ backgroundImage: `url('/images/download.jpg')` }}> 
+         <section className="services-image-section" 
+         style={{ backgroundImage: `url(${backgroundImage})` }}> 
             <div className="services-image-overlay">
                <h1> 
                   <span className="highlight">|</span> 

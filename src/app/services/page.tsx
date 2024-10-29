@@ -22,7 +22,7 @@ const Services = () => {
       <Loader />
     ) : (
       <>
-        <Hero />
+        <Hero  backgroundImage="/images/download.jpg" />
         <ServicesSection />
       </>
     )}

@@ -121,7 +121,7 @@ const ContactUs = () => {
               multiline
               rows={4}
               InputProps={{
-                sx: { color: 'white' }, // Change input text color
+                sx: { color: 'white' }, 
               }}
               sx={{
                 '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
