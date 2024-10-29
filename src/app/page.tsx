@@ -69,7 +69,7 @@ export default function Home() {
           <About />
           <CardHoverEffectDemo />
           <TimelineDemo />
-          <Stats />
+          <Stats props= {{bg:'tranparent',color:'white'}} />
           <InfiniteMovingCardsDemo />
        
           <Fab  

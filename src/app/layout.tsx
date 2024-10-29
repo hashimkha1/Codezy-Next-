@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import  Footer  from "@/components/footer";
 import DescriptionProvider from "@/components/context/description";
+import ScrollButton from "@/components/ScrollButton";
 
 export default function RootLayout({
   children,
@@ -16,6 +17,7 @@ export default function RootLayout({
        
       >
         <Navbar/>
+        <ScrollButton/>
         <DescriptionProvider>
         {children}
         </DescriptionProvider>

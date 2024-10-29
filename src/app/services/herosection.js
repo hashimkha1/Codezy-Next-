@@ -4,24 +4,27 @@ import { DescriContext } from '../../components/context/description.js'; // Use 
 import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
 import Head from './head';
 
-const word = "Our Services";
-
-function Hero() {
-   const {desc} = useContext(DescriContext);
+const word = "Our Team";
+function Hero({backgroundImage}) {
+   const { desc } = useContext(DescriContext);
 
    let data = null;
-   for (let item of desc){
-     if (item.title === 'Our services'){
-      data = item;
-      break;
-     }
-     return data
+
+   // Corrected the loop to find the correct item
+   for (let item of desc) {
+      if (item.title === 'Our Team') {
+         data = item;
+         break; // Exit the loop once we find the item
+      }
    }
-   console.log(data)
+
+   console.log(data);
+   console.log(backgroundImage)
    
    return (
       <>
-         <section className="services-image-section" style={{ backgroundImage: `url('/images/download.jpg')` }}> 
+         <section className="services-image-section" 
+         style={{ backgroundImage: `url(${backgroundImage})` }}> 
             <div className="services-image-overlay">
                <h1> 
                   <span className="highlight">|</span> 
@@ -31,16 +34,15 @@ function Hero() {
          </section>
 
          {/* Section 2: Detailed Text Section */}
-         <section className="services-text-section">
+         {/* <section className="services-text-section">
             <div className="services-text-content">
-            {data ?(
-                   <TextGenerateEffect words={data.description} />
-               ): (
+               {data ? (
+                  <TextGenerateEffect words={data.description} />
+               ) : (
                   <p>No data found</p>
-                )}
-            </div>
-           
-         </section>
+               )}
+            </div> 
+         </section> */}
       </>
    );
 }

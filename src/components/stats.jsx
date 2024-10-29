@@ -3,9 +3,8 @@ import React from 'react';
 import { Box, Typography, Paper } from '@mui/material';
 import { AccessTime, Folder, SentimentSatisfiedAlt, ThumbUp } from '@mui/icons-material';
 
-
-
-function Stats() {
+function Stats({props}) {
+    const { bg, color } = props;
   const stats =[
     { icon: <AccessTime style={{ fontSize: 32, color:'white' }} />,value:2023,label:'Founded'},
     {icon: <Folder style={{ fontSize: 32 , color:'white'}} />,value:5,label:'Completed Projects'},
@@ -13,15 +12,16 @@ function Stats() {
     {icon: <ThumbUp style={{ fontSize: 32, color:'white' }} />,value:3,label:'Positive Feedback'}
   ]
   stats.map((data,index)=>console.log(index))
+  console.log(props)
   return (
   <>
     <Box 
     display= 'flex'
     justifyContent="space-around"
     alignItems="center"
-    bgcolor="#333"
+    bgcolor="#333   "
     p={2}
-    sx={{ gap: 4,height:400,background:'tranparent'}}
+    sx={{ gap: 4,height:400,background:bg}}
     >
      {stats.map((data,index)=>(
       <Box 
@@ -58,7 +58,7 @@ function Stats() {
             {data.icon}
           </Paper>
         
-        <Typography  variant="h4" component="div" fontWeight="bold">
+        <Typography  variant="h4" component="div" sx={{color:color}} fontWeight="bold">
           {data.value}
         </Typography>
         <Typography variant="h7" component="div" color="#ffcc00">
