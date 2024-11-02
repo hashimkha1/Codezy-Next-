@@ -7,29 +7,29 @@ const DescriContext = createContext();
 const DescriptionProvider = ({children}) => {
     const [desc, setDesc] = useState([]);
     const [services,setServices] = useState([])
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        async function Descrip() {
+        async function fetchData() {
             try {
-                const response = await axios.get('http://localhost:8000/api/description');
-                setDesc(response.data);
+                const descriptionResponse = await axios.get('http://localhost:8000/api/description');
+                setDesc(descriptionResponse.data);
+                const servicesResponse = await axios.get('http://localhost:8000/api/services') 
+                console.log(response.data)
+                setServices(response.data)
+                
             } catch (error) {
                 console.error("Error fetching description data:", error);
+            }finally{
+                setLoading(false)
             }
         }
-        async function getService (){
-            const response = await axios.get('http://localhost:8000/api/services') 
-            console.log(response.data)
-            setServices(response.data)
-          }
-        getService()
-        Descrip();
+        fetchData()
+       
     }, []);
     
-   
-
     return (
-        <DescriContext.Provider value={{desc,services}}>
+        <DescriContext.Provider value={{desc,services,loading}}>
             {children}
         </DescriContext.Provider>
     );

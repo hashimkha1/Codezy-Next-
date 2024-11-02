@@ -8,9 +8,6 @@ import { DescriContext } from "./context/description";
 function Navbar({ className }: { className?: string }) {
   
   const [active, setActive] = useState();
- 
-  
- 
   
   return (
     <div
@@ -21,16 +18,6 @@ function Navbar({ className }: { className?: string }) {
         <HoveredLink href="/">Home</HoveredLink>
         <HoveredLink href="/team">Our Team</HoveredLink>
         <HoveredLink href="/services">Services</HoveredLink>
-        {/* <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-          {services.map((item) => (
-            <HoveredLink href='/services/[web]' key={item._id}>
-              {item.title}
-            </HoveredLink>
-          ))}
-
-          </div>
-        </MenuItem> */}
         <MenuItem setActive={setActive} active={active} item="Projects">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/web-dev">Codanalytics</HoveredLink>
@@ -39,7 +26,7 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/branding">Mediabuying Toolbox Development</HoveredLink>
           </div>
         </MenuItem>
-        <HoveredLink href="/web-dev">Hire Us</HoveredLink>
+        <HoveredLink href="/Hire">Hire Us</HoveredLink>
       </Menu>
     </div>
   );
