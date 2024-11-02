@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect,useRef,useCallback } from "react";
+import React, { useState, useEffect,useRef,useCallback, useContext } from "react";
 import { CardHoverEffectDemo } from "../components/Services/Service";
 import { ImagesSliderDemo } from "@/components/hero";
 import { InfiniteMovingCardsDemo } from "@/components/card";
@@ -10,22 +10,25 @@ import Loader from "../components/loader/loader";
 import Chatbot from "../components/chatbot/Chatbot";
 import { Fab, Box, Avatar } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
+import { DescriContext } from "@/components/context/description";
 
 const alertSound = '/alert1.mp3';
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
+
+  const {loading} = useContext(DescriContext)
+  
   const [showChatbot, setShowChatbot] = useState(false);
   const [showText, setShowText] = useState(false); 
   const playCountRef = useRef(0);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000);
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   const playSound = useCallback(() => {
     if (playCountRef.current < 2) {

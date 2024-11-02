@@ -1,20 +1,16 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import './ServicesSection.css';
 import Hero from './herosection';
 import ServicesSection from './services';
 import Loader from '../../components/loader/loader'
 
+import { DescriContext } from '@/components/context/description';
+
 
 const Services = () => {
-  const [loading,setLoading] = useState(true);
-  useEffect(()=>{
-  const timer = setTimeout(()=>{
-    setLoading(false);
-  },2000)
-  return () => clearTimeout(timer);
-  },[])
-
+  const {loading} = useContext(DescriContext)
+  console.log('loader',loading)
   return (
    
     <>

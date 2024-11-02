@@ -1,7 +1,17 @@
 'useClient'
-import React from 'react';
+import React, { useContext } from 'react';
 import { Box, Typography, Grid } from '@mui/material';
+import { DescriContext } from '@/components/context/description';
+
 function About1(){
+    const {desc}  = useContext(DescriContext);
+  console.log('desc:', desc);
+  const filteredDesc = desc ? desc.filter(item => 
+    !['About Us', 'Our Business Strategies', 'Our services'].includes(item.title)
+) : [];
+
+console.log('Filtered Desc:', filteredDesc);
+
 
 return(
  <>

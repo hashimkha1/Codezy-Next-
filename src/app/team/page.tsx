@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import Loader from '../../components/loader/loader';
 import './AboutUs.css'; 
 import Hero from './../services/herosection';
@@ -9,17 +9,13 @@ import About1 from './about';
 import ScrollButton from "../../components/ScrollButton";
 import { Team } from './team';
 import ContactUs from './contactUs';
+import { DescriContext } from '@/components/context/description';
 
 
 const AboutUs = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); 
-    return () => clearTimeout(timer); 
-  }, []);
+  
+  const {loading} = useContext(DescriContext)
+  console.log('loader',loading)
 
   return (
     <>
